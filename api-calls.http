@@ -1,0 +1,52 @@
+### ============================================================
+### STEP 1: REGISTER (Run this first!)
+### ============================================================
+# Click "Send Request" just above this block
+POST http://4.224.186.213/evaluation-service/register
+Content-Type: application/json
+
+{
+  "email": "pmrpmadhusudhanreddy@gmail.com",
+  "name": "Penumuru Madhu Sudhan Reddy",
+  "mobileNo": "7672082814",
+  "githubUsername": "pmunaswamireddy",
+  "rollNo": "23hr1a3048",
+  "accessCode": "aTkybs"
+}
+
+###
+
+### ============================================================
+### STEP 2: GET AUTH TOKEN (Paste clientID & clientSecret below)
+### ============================================================
+# Click "Send Request" just above this block
+POST http://4.224.186.213/evaluation-service/auth
+Content-Type: application/json
+
+{
+  "email": "pmrpmadhusudhanreddy@gmail.com",
+  "name": "Penumuru Madhu Sudhan Reddy",
+  "rollNo": "23hr1a3048",
+  "accessCode": "aTkybs",
+  "clientID": "PASTE_CLIENT_ID_HERE",
+  "clientSecret": "PASTE_CLIENT_SECRET_HERE"
+}
+
+###
+
+### ============================================================
+### STEP 3: TEST LOG API (Paste access_token below)
+### ============================================================
+# Click "Send Request" just above this block
+POST http://4.224.186.213/evaluation-service/logs
+Content-Type: application/json
+Authorization: Bearer PASTE_ACCESS_TOKEN_HERE
+
+{
+  "stack": "backend",
+  "level": "info",
+  "package": "middleware",
+  "message": "Logging middleware initialized successfully"
+}
+
+###
